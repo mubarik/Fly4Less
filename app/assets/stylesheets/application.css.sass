@@ -1,0 +1,123 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap-sprockets"
+@import "bootstrap"
+
+body
+	font: 400 15px Lato, sans-serif
+	line-height: 1.8
+	color: #818181
+.jumbotron
+	background-color: #088a08
+	color: #ffffff
+	padding: 100px 25px
+	font-family: Montserrat, sans-serif
+.bg-grey 
+	background-color: #f6f6f6
+.container-fluid
+	padding: 60px 50px
+.logo
+	font-size: 200px
+	color: #088a08
+.logo-small
+	color: #088a08
+	font-size: 50px
+@media screen and (max-width: 768px)
+.col-sm-4
+	text-align: center
+	margin: 25px 0 
+.thumbnail
+	padding: 0 0 15px 0
+	border: none
+	border-radius: 0
+	img
+		width: 100%
+		height: 100%
+		margin-bottom: 10px
+.carousel-control
+	&.right, &.left
+		background-image: none
+		color: #088a08
+
+.carousel-indicators li
+	border-color: #088a08
+	&.active
+		background-color: #088a08
+.item
+	h4
+		font-size: 19px
+		line-height: 1.375em
+		font-weight: 400
+		font-style: italic
+		margin: 70px 0
+	span
+		font-style: normal
+.navbar
+	margin-bottom: 0
+	font-family: Montserrat, sans-serif
+	background-color: #088a08
+	z-index: 9999
+	border: 0
+	font-size: 12px !important
+	line-height: 1.42857143 !important
+	letter-spacing: 4px
+	border-radius: 0
+	li a, .navbar-brand
+		color: #fff !important
+
+.navbar-nav li
+	a:hover, &.active a
+		color: #088a08 !important
+		background-color: #fff !important
+.navbar-default .navbar-toggle
+	border-color: transparent
+	color: #fff !important
+h2
+	font-size: 24px
+	text-transform: uppercase
+	color: #303030
+	font-weight: 600
+	margin-bottom: 30px
+
+h4
+	font-size: 19px
+	line-height: 1.375em
+	color: #303030
+	font-weight: 400
+	margin-bottom: 30px
+.slideanim
+	visibility: hidden
+.slide
+	animation-name: slide
+	-webkit-animation-name: slide
+	animation-duration: 1s
+	-webkit-animation-duration: 1s
+	visibility: visible
+@keyframes slide
+	0%
+		opacity: 0
+		transform: translateY(70%)
+	100%
+		opacity: 1
+		transform: translateY(0%)
+@-webkit-keyframes slide
+	0%
+		opacity: 0
+		-webkit-transform: translateY(70%)
+	100%
+		opacity: 1
+		-webkit-transform: translateY(0%)

@@ -1,0 +1,19 @@
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">High Tech Consultants</a>
+    </div>
+    <div style = "float :right;">
+	  <% if current_user %>
+	    Logged in as <%= current_user.email %>.
+	    <%= link_to "Log out", log_out_path %>
+	  <% else %>
+	    <%= link_to "Sign up", sign_up_path %> or
+	    <%= link_to "log in", log_in_path %>
+	  <% end %>
+	  <% flash.each do |name, msg| %>
+	  <%= content_tag :div, msg, :id => "flash_#{name}" %>
+	<% end %>
+	</div>
+  </div>
+</nav>
