@@ -49,3 +49,7 @@ group :development, :test do
   gem 'sqlite3'
 end
 
+group :production do
+  gem 'pg'
+  gem 'therubyracer', '0.12.0', platforms: :ruby
+end
